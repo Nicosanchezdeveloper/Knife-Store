@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { KnifeCatalogComponent } from './knife-catalog/knife-catalog.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { KnifeCatalogComponent } from './knife-catalog/knife-catalog.component';
     ListKnifeComponent,
     ContactComponent,
     AboutComponent,
-    KnifeCatalogComponent
+    KnifeCatalogComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
