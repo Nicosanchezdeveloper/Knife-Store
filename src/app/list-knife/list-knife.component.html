@@ -1,0 +1,47 @@
+
+<h2>{{titulo}}</h2>
+
+
+<table class="table table-striped w-75 text-center">
+    <thead>
+        <th scope="col">knifeImage</th>
+        <th scope="col">knifeName</th>
+        <th scope="col">bladeLength</th>
+        <th scope="col">bladeMaterial</th>
+        <th scope="col">price</th>
+        <th scope="col">stock</th>
+        <th scope="col">buys</th>
+    </thead>
+    <tbody>
+        @for(knife of knives; track knife.knifeId){
+        <tr [ngClass]="{'bg-danger': knife.clearance}">
+            <td><img class="image-container" [src]="knife.knifeImage" [alt]="knife.knifeName"></td>
+            <td>{{knife.knifeName}}</td>
+            <td>{{knife.bladeLength}} inches</td>
+            <td>{{knife.bladeMaterial}}</td>
+            <td>{{knife.price | currency}}</td>
+
+            <td>@if (knife.stock == 0) {<span class="p-1 rounded-pill bg-warning text-dark">No Stock</span>}@else{Hay stock}</td>
+            @if (knife.stock > 0) {
+                <td>
+                    <div class="input-group">
+                        <button class="btn bg-primary" (click)="downQuantity(knife)">-</button>
+                            <input type="text" class="w-50" [(ngModel)]="knife.quantity">
+                        <button class="btn bg-primary" (click)="upQuantity(knife)">+</button>
+                    </div>
+                </td>
+                @if (knife.quantity > knife.stock) {
+                    <p>Out of stock</p>
+                }                
+            }
+
+        </tr>
+        }
+        @empty {
+            <tr>
+                <td>No knives to show</td>
+            </tr>    
+        }
+
+    </tbody>
+</table>
