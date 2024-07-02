@@ -25,3 +25,27 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Overview
+Knife Store is a web application developed with Angular, offering a comprehensive user experience for exploring and purchasing high-quality knives. The project is designed to display a wide range of knives with specific details about each product, including images, blade and handle materials, prices, and stock availability. Users can also request custom knives through the contact section.
+
+## Features
+### Home: The main page includes an introduction about the store and its purpose, providing an attractive and professional overview.
+### Knife Catalog: This section allows users to browse the complete catalog of available knives, with detailed information about each one.
+### Contact: A contact page where users can find information on how to reach the store for inquiries and support, and also request custom knives tailored to their preferences. The custom knife request form includes the following fields:
+Name
+Blade Length
+Overall Length
+Weight
+Blade Material
+Handle Material
+Blade Type
+Locking Mechanism
+Edge Type
+Blade Thickness
+Price
+
+## Usage
+Navigate to the Home section to learn more about Knife Store.
+Explore the knife catalog in the Knife Catalog section.
+Use the Contact section to get contact information, support, and request custom knives. The form includes fields for Name, Blade Length, Overall Length, Weight, Blade Material, Handle Material, Blade Type, Locking Mechanism, Edge Type, Blade Thickness, and Price.
