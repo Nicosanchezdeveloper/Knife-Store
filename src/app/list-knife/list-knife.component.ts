@@ -85,6 +85,8 @@ export class ListKnifeComponent {
     quantity: 0,
   }]
 
- 
+ maxReached(m: string){
+  alert(m);
+ }
 }
 

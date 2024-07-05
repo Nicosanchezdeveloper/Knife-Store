@@ -1,4 +1,3 @@
-
 <h2>{{titulo}}</h2>
 
 
@@ -21,22 +20,26 @@
             <td>{{knife.bladeMaterial}}</td>
             <td>{{knife.price | currency}}</td>
 
-            <td>@if (knife.stock == 0) {<span class="p-1 rounded-pill bg-warning text-dark">No Stock</span>}@else{Hay stock}</td>
+            <td>@if (knife.stock == 0) {<span class="p-1 rounded-pill bg-warning text-dark">No Stock</span>}@else{Hay
+                stock}</td>
             @if (knife.stock > 0) {
-                <td>
-                  <app-input-knife-quantity [knife]="knife"></app-input-knife-quantity>
-                </td>
-                @if (knife.quantity > knife.stock) {
-                    <p>Out of stock</p>
-                }                
+            <td>
+                <app-input-quantity [(quantity)]="knife.quantity" [max]="knife.stock" (maxReached)="
+                    maxReached($event)"></app-input-quantity>
+                {{knife.quantity}}
+            </td>
+
+            @if (knife.quantity > knife.stock) {
+            <p>Out of stock</p>
+            }
             }
 
         </tr>
         }
         @empty {
-            <tr>
-                <td>No knives to show</td>
-            </tr>    
+        <tr>
+            <td>No knives to show</td>
+        </tr>
         }
 
     </tbody>
