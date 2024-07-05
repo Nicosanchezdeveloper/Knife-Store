@@ -1,2 +1,23 @@
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate laudantium ab tempore rem eum magnam est, aliquam recusandae maiores, ducimus sequi neque facilis minima officiis similique vitae veritatis aperiam nobis?</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, autem nihil possimus dolor sed aut pariatur tempora provident nulla? Beatae quam ea nihil placeat rerum corrupti maxime eaque modi dicta.</p>
+<div class="container w-100 h-100 d-flex justify-content-evenly">
+    
+    <form class="w-50">
+        <p>Order Knife</p>
+        @for ( contact of contactInformation; track contact) {
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="{{contact}}">
+        </div>
+        }
+
+
+
+        <button type="submit" class="btn btn-primary">Order Knife</button>
+    </form>
+
+    <form action="" class="d-flex flex-column">
+        <p>Send Message</p>
+        <input type="text" class="form-control" placeholder="Name">
+        <input type="email" class="form-control" placeholder="Email">
+        <textarea name="Mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+</div>

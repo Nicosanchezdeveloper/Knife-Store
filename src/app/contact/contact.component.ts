@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  
+  contactInformation: string[] = ["Name", "Email", "Blade Length", "Overall Length",  "Weight", "Blade Material", "Handle Material", "Blade Type", "Locking Mechanism", "Edge Type", "Blade Thickness"]; 
 }

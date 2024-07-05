@@ -7,6 +7,7 @@ import { KnifeSpecification } from './Knife-specification';
 })
 export class ListKnifeComponent {
   titulo: string = "Knife List";
+  
   knives: KnifeSpecification[] = [{
     knifeId: 1,
     knifeImage: "assets/image/Benchmade_Bugout.jpeg",
@@ -84,12 +85,6 @@ export class ListKnifeComponent {
     quantity: 0,
   }]
 
-  upQuantity(knife: KnifeSpecification): void{
-    if(knife.quantity < knife.stock) knife.quantity++;
-  }
-
-  downQuantity(knife: KnifeSpecification): void{
-    if(knife.quantity > 0)knife.quantity--;
-  }
+ 
 }
 

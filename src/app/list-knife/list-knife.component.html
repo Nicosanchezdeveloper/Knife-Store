@@ -24,11 +24,7 @@
             <td>@if (knife.stock == 0) {<span class="p-1 rounded-pill bg-warning text-dark">No Stock</span>}@else{Hay stock}</td>
             @if (knife.stock > 0) {
                 <td>
-                    <div class="input-group">
-                        <button class="btn bg-primary" (click)="downQuantity(knife)">-</button>
-                            <input type="text" class="w-50" [(ngModel)]="knife.quantity">
-                        <button class="btn bg-primary" (click)="upQuantity(knife)">+</button>
-                    </div>
+                  <app-input-knife-quantity [knife]="knife"></app-input-knife-quantity>
                 </td>
                 @if (knife.quantity > knife.stock) {
                     <p>Out of stock</p>

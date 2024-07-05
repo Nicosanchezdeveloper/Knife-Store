@@ -1,1 +1,31 @@
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui repellat aliquam, laborum exercitationem tenetur ipsum animi aut enim. Autem odit ratione deserunt sunt vel doloremque ex iusto nostrum magni nesciunt.</p>
+<div class="container w-100 d-flex flex-column justify-content-center p-0">
+    <div class="container text-center p-0 w-75 h-25 border rounded">
+        <h2>About Knife Store</h2>
+        <p>Welcome to Knife Store, your ultimate destination for high-quality knives. Our mission is to provide
+            enthusiasts,
+            collectors, and professionals with the best selection of knives, featuring top-notch craftsmanship and
+            materials. Whether you're looking for a reliable tool for everyday use, a specialized blade for outdoor
+            adventures, or a unique piece to add to your collection, Knife Store has something for everyone.</p>
+    </div>
+    <div class="container w-75 h-50">
+        <h2>{{title}}</h2>
+        <p>Choosing the right knife involves understanding several key aspects. Here’s a concise guide to help you make
+            an
+            informed decision: </p>
+        @for(about of aboutInformation; track about){
+            <div class="container">
+                <p>{{about.title}}</p>
+                <p>{{about.description}}</p>
+                @if (about.points.length > 0) {
+                    <ul class="list-group">
+                        @for (point of about.points; track point) {
+                            <li class="list-group-item">{{point}}</li>
+                        }
+
+                    </ul>
+                }
+            </div>
+        }
+
+    </div>
+</div>

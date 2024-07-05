@@ -16,4 +16,5 @@ export interface KnifeSpecification{
     stock: number;
     clearance: boolean;
     quantity: number;
+
 }
