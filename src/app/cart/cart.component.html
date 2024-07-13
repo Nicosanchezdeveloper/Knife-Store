@@ -1,0 +1,10 @@
+<h1>Cart</h1>
+<div>
+    <ul class="navbar-nav-scroll">
+
+        @for (knife of cart.cartList; track cart.cartList) {
+            <li>{{knife.knifeName}} price: {{knife.price}}</li>
+            }
+    </ul>
+    <button class="btn">Buy</button>
+</div>

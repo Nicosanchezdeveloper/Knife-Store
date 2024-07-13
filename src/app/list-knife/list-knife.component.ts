@@ -1,11 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { KnifeSpecification } from './Knife-specification';
+import { KnifeCartService } from '../knife-cart.service';
 @Component({
   selector: 'app-list-knife',
   templateUrl: './list-knife.component.html',
   styleUrl: './list-knife.component.scss'
 })
-export class ListKnifeComponent {
+export class ListKnifeComponent implements OnInit {
+  
+  
+  constructor(private cart: KnifeCartService) { }
+  ngOnInit(): void {
+
+  }
+  
+  @Injectable({
+    providedIn: 'root'
+  })
+  
+  addToCart(knife: any): void{
+    if(knife.quantity > 0 && knife.knifeId && knife.stock > 0){
+      for(let i = 0; i < knife.quantity; i++){
+        this.cart.addToCart(knife);
+        knife.stock--;
+      }
+    }
+  }
+
+
   titulo: string = "Knife List";
   
   knives: KnifeSpecification[] = [{
@@ -42,7 +64,7 @@ export class ListKnifeComponent {
     bladeThickness:  0.090,
     Manufacturer: "Benchmade",
     price: 185.00,
-    stock: 16,
+    stock: 4,
     clearance: true,
     quantity: 0,
   },

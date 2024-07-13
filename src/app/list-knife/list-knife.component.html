@@ -27,13 +27,15 @@
                 <app-input-quantity [(quantity)]="knife.quantity" [max]="knife.stock" (maxReached)="
                     maxReached($event)"></app-input-quantity>
                 {{knife.quantity}}
+
+                <button class="btn" (click)="addToCart(knife)">Agregar</button>
             </td>
+            
 
             @if (knife.quantity > knife.stock) {
             <p>Out of stock</p>
             }
             }
-
         </tr>
         }
         @empty {

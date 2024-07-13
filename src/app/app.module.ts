@@ -11,6 +11,7 @@ import { KnifeCatalogComponent } from './knife-catalog/knife-catalog.component';
 import { CartComponent } from './cart/cart.component';
 import { CommonModule } from '@angular/common';
 import { InputQuantityComponent } from './input-quantity/input-quantity.component';
+import { OrderKnifeComponent } from './order-knife/order-knife.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { InputQuantityComponent } from './input-quantity/input-quantity.componen
     KnifeCatalogComponent,
     CartComponent,
     InputQuantityComponent,
+    OrderKnifeComponent,
   ],
   imports: [
     BrowserModule,

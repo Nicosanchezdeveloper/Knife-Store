@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './knife-catalog.component.scss'
 })
 export class KnifeCatalogComponent {
-
+ 
 }

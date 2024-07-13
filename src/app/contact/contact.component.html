@@ -1,19 +1,5 @@
-<div class="container w-100 h-100 d-flex justify-content-evenly">
-    
-    <form class="w-50">
-        <p>Order Knife</p>
-        @for ( contact of contactInformation; track contact) {
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="{{contact}}">
-        </div>
-        }
-
-
-
-        <button type="submit" class="btn btn-primary">Order Knife</button>
-    </form>
-
-    <form action="" class="d-flex flex-column">
+<div class="container d-flex justify-content-evenly">
+    <form action="" class="d-flex flex-column h-100">
         <p>Send Message</p>
         <input type="text" class="form-control" placeholder="Name">
         <input type="email" class="form-control" placeholder="Email">
